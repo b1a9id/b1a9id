@@ -1,16 +1,12 @@
 ### Hi there 👋
+**所属**  
+[STORES株式会社](https://www.st.inc)（正社員）  
+[GRASグループ株式会社](https://gras-group.co.jp)（業務委託）  
 
-<!--
-**b1a9id/b1a9id** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**SNS**  
+📗 [Twitter](https://twitter.com/b1a9idps)  
+📗 [GitHub](https://github.com/b1a9id)  
+📗 [SlideShare](https://www.slideshare.net/RyosukeUchitate)  
+📗 [Old Blod](https://uchi-fashion.hatenablog.com)  
+📗 [note](https://note.com/b1a9idps)  
+📗 [Facebook](https://www.facebook.com/people/Ryosuke-Uchitate/100004147568068)
