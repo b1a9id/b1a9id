@@ -27,7 +27,7 @@
 - [Amazon Cognito使って認証したい？それならSpring Security使いましょう！](https://www.slideshare.net/RyosukeUchitate/amazon-cognitospring-security)
 - [春だしBannerで遊バナいか？](https://www.slideshare.net/RyosukeUchitate/banner-94283851)
 - [ユニットテストのアサーション　流れるようなインターフェースのAssertJを添えて　入門者仕立て](https://www.slideshare.net/RyosukeUchitate/assertj-82260732)
-- [Spring 超入門~Springと出会ってから１年半~](https://www.slideshare.net/RyosukeUchitate/springspring1)
+- [Spring 超入門-Springと出会ってから１年半-](https://www.slideshare.net/RyosukeUchitate/springspring1)
 - [Boot starterが語るSpring Bootの仕組み](https://www.slideshare.net/RyosukeUchitate/spring-io-2016-63373522)
 
 **SNS**  
