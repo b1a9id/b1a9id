@@ -1,8 +1,6 @@
 # STORES株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
-雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
-
 ## 2021/01 ~ 2021/04 JenkinsからGitHub Actionsへの移行
 
 **利用技術：** AWS、Terraform、GitHub Actions
