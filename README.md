@@ -34,6 +34,6 @@
 📗 [Twitter](https://twitter.com/b1a9idps)  
 📗 [GitHub](https://github.com/b1a9id)  
 📗 [SlideShare](https://www.slideshare.net/RyosukeUchitate)  
-📗 [Old Blod](https://uchi-fashion.hatenablog.com)  
+📗 [Blod](https://b1a9idps.com)  
 📗 [note](https://note.com/b1a9idps)  
 📗 [Facebook](https://www.facebook.com/people/Ryosuke-Uchitate/100004147568068)
