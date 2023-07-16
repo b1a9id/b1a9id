@@ -1,6 +1,9 @@
 # STORES株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
+<details>
+    <summary>2021年以前</summary>
+
 ## 2021/01 ~ 2021/04 JenkinsからGitHub Actionsへの移行
 
 **利用技術：** AWS、Terraform、GitHub Actions
@@ -89,6 +92,8 @@ QAチームと一緒にテスト項目書を作ってテストをしたのもあ
 Spring SecurityのSecurity Filter Chainを通過した後のSpring Webに処理が移ったときに認証・認可を行なっていた。Spring的に正しい実装方法ではなく、またサービス拡張を考えたときに拡張しづらくなることを考えて改修した。方針検討、実装、テストを担当。
 Spring Securityを適切に利用することでセキュリティが高く、今後の拡張もしやすくなった。
 
+
+
 ## 2018/08 ~ 2019/03 コールセンターとカスタマーサポートチーム間の業務改善
 
 **利用技術：** Java 1.8、Spring Boot 2.1.x、AWS(Elastic Beanstalk、Cloud Watch、Amazon Aurora、Cognito、S3)
@@ -96,3 +101,5 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 コールセンターの方たちは社内専用サービスを利用することができず、スプレッドシート等でカスタマーサポートチームを必要な情報をやりとりしている状況だった。業務改善のために、社内専用サービスをコールセンターの方たちも利用できるようにした。API設計、実装、インフラ設計・構築、テスト担当。
 当時社内に知見のなかったSpring Boot 2やMicrometer、TestContainersを導入しました。Amazon CognitoのSDKとSpring Security使って認証・認可処理を実装するのは特に苦戦した。TestContainersを導入したことで、本番と同じDBMSを利用したテストを書けるようになり、よりクオリティ高いテストを書けるようになった。
 開発以外では、プロジェクト全体の進捗管理を行ったり、QAやビジネスサイドの人たち向けに噛み砕いた資料を作って仕様説明会を行ったりした。
+
+</details>
