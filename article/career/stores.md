@@ -1,14 +1,49 @@
 # STORES株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
+## 
+
+## 2021/07 ~ 2022/04 コンタクトレス決済対応
+
+**利用技術：** Java 1.8、Spring Boot 2.4.x
+新規加盟店の獲得、既存加盟店の体験向上、コンタクトレス決済未搭載による事業リスク対応を目的としたプロジェクト。
+
+<details>
+    <summary>2021年以前</summary>
+
+## 2021/07 ~ 2021/08 反社チェックAPIのデータソース追加
+
+**利用技術：** Java 16、Spring Boot 2.5.x、Terraform、GitHub Actions
+
+「クレジットカード番号等取扱契約締結事業者」の登録要件である、CSRS Ⅱを使った反社チェックに対応するためのプロジェクト。
+これを実現するにあたって、再設計はリファクタリングが必要だったため実施した。
+
+### リファクタリング内容
+#### CSVファイルののアップロードを非同期にする
+CSVのインポート処理を同期的に行っていて、タイムアウトで504が返っていたため非同期でデータの挿入を行うようにした
+
+#### Codacyの導入
+コードのクオリティやカバレッジを可視化するために[Codacy](https://www.codacy.com)を導入した
+
+#### Amazon RDS for MySQLを5.7から8.0にアップグレード
+Java 16から[TLSv1.0とTLSv1.1が廃止](https://bugs.openjdk.org/browse/JDK-8202343)になった。また、利用しているMySQLは5.7.19で[TLSv1.2サポートされてない](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.SSLSupport)。「1.MySQL 5.7のTLS v1.2対応バージョンにあげる」、「2. MySQL 5.7 から MySQL 8.0にバージョンアップする」、「3. 新規でMySQL 8.0のRDSインスタンスを立てる」の選択肢があったが、反社データは毎回全件削除してデータを入れ替えており、データ損失のリスクを考えなくてよい（再アップロードすればよい）のと3の工数が1番かからないことから3の方法を取った。
+
+#### Java 16 & Spring Boot 2.5にバージョンアップ
+- サポートが切れた & キャッチアップも含めてJavaの最新バージョンにアップグレード。Spring Bootのバージョンも2.5にした。また、次のようなリファクタリングも行った。
+    - [xlsbeans](https://github.com/takezoe/xlsbeans)がずっとメンテされてないので利用するのやめて、POIのみでエクセルデータ -> DTOマッピングをやる
+    - apache poiを5.0に
+    - AntisocialData.java（エンティティ）をイミュータブルに
+    - batch insertにする
+    - 周辺ライブラリのバージョンアップ
+
+#### springdoc-openapi導入
+APIとドキュメントの乖離防止等の理由から[springdoc-openapi](https://github.com/springdoc/springdoc-openapi)を導入した。
+
 ## 2021/05 ~ 2021/07 Elastic Beanstalkで動いているAPIのECS移行
 
 **利用技術：** Java 1.8、Spring Boot 2.4.x、Spring Cloud 2020.0.0、AWS(IAM、S3、ALB、ECS、Security Group) 、Terraform、GitHub Actions
 「時代にそぐわない、Java 8より後のバージョンがAmazon Correttoしか利用できない、Beanstalkはブラックボックス化しているため不具合の原因調査等が難しい」など理由からECSへの移行を決めた。
 デフォルトだと、アプリケーションログ、アクセスログ、エラーログが１箇所に吐き出されてしまうため、AWS FireLensを利用して分けて吐き出すようにした。デプロイはGitHub Actionsから行うようにした。
-
-<details>
-    <summary>2021年以前</summary>
 
 ## 2021/01 ~ 2021/04 JenkinsからGitHub Actionsへの移行
 
@@ -56,7 +91,7 @@ DB移行も必要だったため、TerraformでRDSを構築した。
 - [Spring Cloud OpenFeignで遊ぶ](https://www.b1a9idps.com/posts/spring-cloud-open-feign-1)
 - [Spring BootアプリケーションでAWS Systems Manager パラメータストアを利用する](https://www.b1a9idps.com/posts/spring-boot-parameter-store)
 
-m要件外のリファクタリングの変更が多かったが、バグを出してしまっては意味がないので、テスト項目書を作成しフロントエンドチームとQA前に2週間かけてテストを行った。QA期間中は疑問点等を自ら拾って回答するようにして品質向上に協力した。
+要件外のリファクタリングの変更が多かったが、バグを出してしまっては意味がないので、テスト項目書を作成しフロントエンドチームとQA前に2週間かけてテストを行った。QA期間中は疑問点等を自ら拾って回答するようにして品質向上に協力した。
 プロジェクト開始時に立てたスケジュールよりも前倒しで進められた上に、リリース後バグもなくとても満足のいくプロジェクトとなった。
 
 ## 2020/07 TravisからGitHub Actionsへの移行
