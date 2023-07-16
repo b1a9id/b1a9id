@@ -1,6 +1,12 @@
 # STORES株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
+## 2021/05 ~ 2021/07 Elastic Beanstalkで動いているAPIのECS移行
+
+**利用技術：** Java 1.8、Spring Boot 2.4.x、Spring Cloud 2020.0.0、AWS(IAM、S3、ALB、ECS、Security Group) 、Terraform、GitHub Actions
+「時代にそぐわない、Java 8より後のバージョンがAmazon Correttoしか利用できない、Beanstalkはブラックボックス化しているため不具合の原因調査等が難しい」など理由からECSへの移行を決めた。
+デフォルトだと、アプリケーションログ、アクセスログ、エラーログが１箇所に吐き出されてしまうため、AWS FireLensを利用して分けて吐き出すようにした。デプロイはGitHub Actionsから行うようにした。
+
 <details>
     <summary>2021年以前</summary>
 
